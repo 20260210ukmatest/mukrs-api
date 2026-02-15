@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="MahjongUKRankingSystem.API/MahjongUKRankingSystem.API.csproj" />
+  <Project Path="MahjongUKRankingSystem.DbModels/MahjongUKRankingSystem.DbModels.csproj" />
+</Solution>
