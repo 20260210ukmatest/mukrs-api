@@ -1,3 +1,5 @@
+ARG MUKRS_CONNECTION_STRING
+
 FROM mcr.microsoft.com/dotnet/aspnet:10.0 AS base
 WORKDIR /app
 EXPOSE 80
@@ -19,4 +21,5 @@ RUN dotnet publish "MahjongUKRankingSystem.API.csproj" -c Release -o /app/publis
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
+ENV ConnectionStrings__MukrsConnection=${MUKRS_CONNECTION_STRING}
 ENTRYPOINT ["dotnet", "MahjongUKRankingSystem.API.dll"]
