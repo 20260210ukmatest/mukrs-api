@@ -9,6 +9,7 @@ namespace MahjongUKRankingSystem.API.Controllers
     public class RankingsController : ControllerBase
     {
         [HttpGet]
+        [Route("GetLatestData")]
         public async Task<GetLatestRankingsDataDto> GetLatestData(
             [FromServices] GetLatestRankingsDataCommand command,
             [FromQuery] DateOnly notBefore,
